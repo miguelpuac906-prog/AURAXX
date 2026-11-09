@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURAX Montañismo GT | Expediciones y Outdoor</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --cyan-neon: #00e5ff;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(15, 23, 42, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-light);
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--cyan-neon);
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cyan-neon);
+        }
+
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(15,23,42,0.8) 0%, rgba(15,23,42,1) 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .mascot-badge {
+            display: inline-block;
+            background: var(--bg-card);
+            border: 2px solid var(--cyan-neon);
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem 0;
+            color: var(--cyan-neon);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--cyan-neon);
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            color: var(--cyan-neon);
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--cyan-neon);
+            color: #000;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid #334155;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--cyan-neon);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AURA<span>X</span></div>
+        <nav>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#viajes">Próximos Viajes</a>
+            <a href="#tienda">Tienda</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="mascot-badge">🐺 Lobo AURAX | Ojos & X Cian</div>
+        <h1>Explora con la comunidad AURAX</h1>
+        <p>Senderismo, expediciones y montaña con seguridad y pasión.</p>
+    </section>
+
+    <div class="container">
+        <!-- Próximos Viajes -->
+        <h2 id="viajes" class="section-title">Próximos Viajes</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Volcán Tajumulco</h3>
+                <p>14-15 de Noviembre</p>
+                <div class="price">Q280.00</div>
+                <a href="https://wa.me/50254342015?text=Hola%20AURAX,%20quiero%20reservar%20mi%20lugar%20para%20el%20Volc%C3%A1n%20Tajumulco" target="_blank" class="btn">Reservar Lugar</a>
+            </div>
+            <div class="card">
+                <h3>Pepajau + Laguna Magdalena</h3>
+                <p>22 de Noviembre</p>
+                <div class="price">Q340.00</div>
+                <a href="https://wa.me/50254342015?text=Hola%20AURAX,%20quiero%20reservar%20mi%20lugar%20para%20Pepajau%20%2B%20Laguna%20Magdalena" target="_blank" class="btn">Reservar Lugar</a>
+            </div>
+            <div class="card">
+                <h3>Tour a Nicaragua</h3>
+                <p>26 al 29 de Noviembre</p>
+                <div class="price">Q2,100.00</div>
+                <a href="https://wa.me/50254342015?text=Hola%20AURAX,%20quiero%20reservar%20mi%20lugar%20para%20el%20Tour%20a%20Nicaragua" target="_blank" class="btn">Reservar Lugar</a>
+            </div>
+        </div>
+
+        <!-- Tienda de Productos -->
+        <h2 id="tienda" class="section-title">Tienda AURAX</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Estufa Portátil Camping</h3>
+                <div class="price">Q140.00</div>
+                <a href="https://wa.me/50254342015?text=Hola%20AURAX,%20me%20interesa%20comprar%20la%20estufa%20port%C3%A1til" target="_blank" class="btn">Comprar</a>
+            </div>
+            <div class="card">
+                <h3>Linterna Outdoor</h3>
+                <div class="price">Q120.00</div>
+                <a href="https://wa.me/50254342015?text=Hola%20AURAX,%20me%20interesa%20comprar%20la%20linterna" target="_blank" class="btn">Comprar</a>
+            </div>
+            <div class="card">
+                <h3>Gorra Oficial AURAX</h3>
+                <div class="price">Q120.00</div>
+                <a href="https://wa.me/50254342015?text=Hola%20AURAX,%20me%20interesa%20comprar%20la%20gorra" target="_blank" class="btn">Comprar</a>
+            </div>
+            <div class="card">
+                <h3>Llavero Oficial AURAX</h3>
+                <div class="price">Q15.00</div>
+                <a href="https://wa.me/50254342015?text=Hola%20AURAX,%20me%20interesa%20comprar%20el%20llavero" target="_blank" class="btn">Comprar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/50254342015?text=Hola%20AURAX,%20quiero%20m%C3%A1s%20informaci%C3%B3n" class="whatsapp-float" target="_blank">
+        💬 Reservar por WhatsApp
+    </a>
+
+    <footer>
+        <p>© AURAX Montañismo GT | Síguenos en:</p>
+        <p>
+            <a href="https://www.tiktok.com/@aurax546" target="_blank">TikTok</a> | 
+            <a href="https://www.instagram.com/aurax_gt/" target="_blank">Instagram</a>
+        </p>
+    </footer>
+
+</body>
+</html>
